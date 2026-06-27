@@ -1,8 +1,4 @@
 // script.js
-// Initialize EmailJS
-emailjs.init({
-  publicKey: '11TcJitY6ZSYn-GYF',
-});
 
 // Hamburger Menu Toggle
 const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -93,31 +89,88 @@ document.querySelectorAll('.nav-btn').forEach(button => {
 });
 
 // Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', (e) => {
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+const submitButton = contactForm.querySelector('button[type="submit"]');
+
+function setFormMessage(type, message) {
+  formMessage.className = 'form-message';
+  formMessage.classList.add(type);
+  formMessage.textContent = message;
+}
+
+function validateContactForm(formData) {
+  const name = (formData.get('user_name') || '').trim();
+  const email = (formData.get('user_email') || '').trim();
+  const subject = (formData.get('subject') || '').trim();
+  const message = (formData.get('message') || '').trim();
+
+  if (!name || name.length < 2) {
+    return 'Please enter your full name.';
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return 'Please enter a valid email address.';
+  }
+
+  if (!subject || subject.length < 3) {
+    return 'Please enter a subject.';
+  }
+
+  if (!message || message.length < 10) {
+    return 'Please enter a message with at least 10 characters.';
+  }
+
+  return null;
+}
+
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  emailjs.sendForm('service_el6zmci', 'template_wv6avkn', e.target)
-    .then(() => {
-      // Create and show congratulation message
-      const congratsMessage = document.createElement('div');
-      congratsMessage.classList.add('congrats-message');
-      congratsMessage.innerHTML = `
-        <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-        <p>Message sent successfully!</p>
-      `;
-      document.body.appendChild(congratsMessage);
-      
-      // Remove message after animation
-      setTimeout(() => {
-        congratsMessage.remove();
-      }, 3000);
-      
-      // Reset form
-      e.target.reset();
-    }, (error) => {
-      alert('Failed to send message. Please try again.');
-      console.error('EmailJS Error:', error);
+  const formData = new FormData(contactForm);
+  const validationError = validateContactForm(formData);
+
+  if (validationError) {
+    setFormMessage('error', validationError);
+    return;
+  }
+
+  const payload = {
+    name: (formData.get('user_name') || '').trim(),
+    email: (formData.get('user_email') || '').trim(),
+    subject: (formData.get('subject') || '').trim(),
+    message: (formData.get('message') || '').trim()
+  };
+
+  submitButton.disabled = true;
+  submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  setFormMessage('info', 'Sending your message...');
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
     });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || 'Failed to send message.');
+    }
+
+    setFormMessage('success', 'Your message has been sent successfully.');
+    contactForm.reset();
+  } catch (error) {
+    setFormMessage('error', error.message || 'Something went wrong. Please try again.');
+    console.error('Contact form error:', error);
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+  }
 });
 
 // Initialize Animations

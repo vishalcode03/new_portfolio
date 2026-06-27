@@ -965,6 +965,34 @@ textarea {
     box-shadow: 0 5px 20px var(--neon-pink);
 }
 
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-message {
+    min-height: 1.25rem;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    color: #4ade80;
+}
+
+.form-message.error {
+    display: block;
+    color: #f87171;
+}
+
+.form-message.info {
+    display: block;
+    color: var(--neon-cyan);
+}
+
 .contact-info {
     background: var(--section-bg);
     padding: 2rem;
