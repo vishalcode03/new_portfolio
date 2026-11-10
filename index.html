@@ -40,19 +40,19 @@
         <div class="hamburger-bar"></div>
         <div class="hamburger-bar"></div>
     </div>
+   <!-- Navigation -->
+<nav class="nav-container">
+    <button class="nav-btn" data-section="hero">Home</button>
+    <button class="nav-btn" data-section="about">About</button>
+    <button class="nav-btn" data-section="skills">Skills</button>
+    <button class="nav-btn" data-section="projects">Projects</button>
+    <button class="nav-btn" data-section="certificates">Certificates</button>
+    <button class="nav-btn" data-section="contact">Contact</button>
 
-    <!-- Navigation -->
-    <nav class="nav-container">
-        <button class="nav-btn" data-section="hero">Home</button>
-        <button class="nav-btn" data-section="about">About</button>
-        <button class="nav-btn" data-section="skills">Skills</button>
-        <button class="nav-btn" data-section="projects">Projects</button>
-        <button class="nav-btn" data-section="certificates">Certificates</button>
-        <button class="nav-btn" data-section="contact">Contact</button>
-        <button class="theme-toggle" id="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button>
-    </nav>
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+</nav>
 
    <!-- Hero Section -->
     <section id="hero" class="section">
@@ -292,382 +292,248 @@
 </section>
 
     
-<!-- Java Ecosystem -->
 
-    <section id="skills" class="section fade-in">
-<div class="skill-category hover-float">
-    <h3><i class="fa-brands fa-java"></i> Java Ecosystem</h3>
+<!-- Skills Section -->
+<section id="skills" class="section fade-in">
+    <div class="section-content">
 
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Core Java</span>
-            <span class="skill-percent">85%</span>
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-grid">
+
+            <!-- Java Ecosystem -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-brands fa-java"></i> Java Ecosystem</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Core Java</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Spring Boot</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Hibernate / JPA</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-brands fa-react"></i> Frontend</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML5 / CSS3</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">React.js</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Tailwind CSS</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Node.js / Express.js</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">REST APIs</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Spring Security / JWT</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-database"></i> Database</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">MySQL</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">PostgreSQL</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Redis</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
+                </div>
+            </div>
+
+            <!-- Microservices -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-cubes"></i> Microservices</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Spring Cloud</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">API Gateway</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Apache Kafka</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">AWS</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Linux</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Docker / Kubernetes</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Jenkins</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-brain"></i> AI & Generative AI</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Generative AI</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Spring AI</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Ollama / RAG</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category hover-float">
+                <h3><i class="fa-solid fa-toolbox"></i> Tools & Testing</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Git / GitHub</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Postman</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">JUnit / Mockito</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
+                </div>
+            </div>
+
         </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="85"></div></div>
     </div>
+</section>
 
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Spring Framework</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Maven</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Spring Data JPA / Hibernate</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-</div>
-
-
-<!-- Microservices -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-cubes"></i> Microservices</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Spring Cloud</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">API Gateway</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Config Server</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Nginx</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-</div>
-
-
-<!-- Database & Search -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-server"></i> Database & Search</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Redis</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Elasticsearch</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">ChromaDB</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-</div>
-
-
-<!-- Messaging & Real-Time -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-tower-broadcast"></i> Messaging & Real-Time</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Apache Kafka</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">RabbitMQ</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">WebSockets</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-</div>
-
-
-<!-- API Security & Testing -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-shield-halved"></i> API Security & Testing</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">OAuth 2.0</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">JWT</span>
-            <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Swagger / OpenAPI</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">JUnit 5</span>
-            <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Mockito</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Apache JMeter</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-</div>
-
-
-<!-- DevOps & CI/CD -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-infinity"></i> DevOps & CI/CD</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Linux</span>
-            <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="80"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Jenkins</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">CI/CD</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-</div>
-
-
-<!-- AI & Generative AI -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-brain"></i> AI & Generative AI</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Generative AI</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Spring AI</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Ollama</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">RAG</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <div class="skill-name">MCP</div>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">AI Agents</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Multimodal AI</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Claude Code</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-</div>
-
-
-<!-- Monitoring & Observability -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-chart-line"></i> Monitoring & Observability</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">SonarQube</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Prometheus</span>
-            <span class="skill-percent">70%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="70"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Grafana</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Zipkin</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Logstash</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Kibana</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">New Relic</span>
-            <span class="skill-percent">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="65"></div></div>
-    </div>
-</div>
-
-
-<!-- Additional Deployment -->
-<div class="skill-category hover-float">
-    <h3><i class="fa-solid fa-cloud-arrow-up"></i> Additional Hosting</h3>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Heroku</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-
-    <div class="skill-item">
-        <div class="skill-info">
-            <span class="skill-name">Hostinger</span>
-            <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-progress" data-percent="75"></div></div>
-    </div>
-</div> 
-
-    </section>
        <!-- Certificates Section -->
        <section id="certificates" class="section fade-in">
         <div class="section-content">
